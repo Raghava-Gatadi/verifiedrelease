@@ -78,7 +78,7 @@ jobs:
           printf '%s\n' "$IMAGE" > artifacts/release/image.txt
       - name: Preserve release evidence
         if: always()
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: release-evidence-${{ github.run_id }}
           path: |
@@ -119,7 +119,7 @@ jobs:
         run: curl --fail --retry 5 --retry-delay 2 http://localhost:8000/health
       - name: Preserve deployment decision
         if: always()
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: deployment-decision-${{ github.run_id }}
           path: artifacts/deployment/
