@@ -1,0 +1,47 @@
+{
+  "verifiedOn": "2026-10-30",
+  "mode": "local verification; GitHub OIDC release not executed",
+  "upstreamCommit": "0a497a6fa7e10b433a1f2e6c2198d09a9bac2cf3",
+  "workingTreeDirty": true,
+  "scannedSourceTreeSha256": "30690f422e136acee8b40587b128ef4771253e3c03dd1c99318600fde37c6008",
+  "image": "localhost:5055/tenantledger@sha256:0b26407e4070936b8b77d6a032b0c24ce2e03071a0edbcecece216e8b1d3b744",
+  "amd64ImageDigest": "sha256:37df42330b09a17252de10a2e739104d017985286589399ae6900cc6cfd6bf2c",
+  "sbomPackages": 83,
+  "applicationTestsPassed": 86,
+  "statementCoveragePercent": 91,
+  "authorizationDefectsDetected": 5,
+  "authorizationDefectsTotal": 5,
+  "releaseTestsPassed": 25,
+  "browserChecksPassed": 8,
+  "javascriptErrors": 0,
+  "activeExceptions": 0,
+  "findings": {
+    "bandit:LOW": 2,
+    "grype:MEDIUM": 5
+  },
+  "rejectionCases": [
+    {
+      "case": "allowed",
+      "stage": "ALLOWED",
+      "passed": true
+    },
+    {
+      "case": "unsigned",
+      "stage": "SIGNATURE",
+      "passed": true
+    },
+    {
+      "case": "unexpected-signer",
+      "stage": "SIGNATURE",
+      "passed": true
+    },
+    {
+      "case": "policy-failure",
+      "stage": "POLICY",
+      "passed": true
+    }
+  ],
+  "portableProvenanceVerification": "Verified OK",
+  "githubWorkflowValidation": "actionlint passed; workflow has not run on GitHub",
+  "remainingActivation": "Review/push branch, configure repository rulesets, run Verified release on main"
+}

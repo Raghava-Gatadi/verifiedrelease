@@ -1,0 +1,67 @@
+{
+  "cosign": {
+    "version": "3.1.4",
+    "platforms": {
+      "darwin_arm64": {
+        "url": "https://github.com/sigstore/cosign/releases/download/v3.1.4/cosign-darwin-arm64",
+        "sha256": "9f9b8cd557cf2e5b3df3373a00baa005a86b02391e3e06dd0ce37b3a1533d3a4"
+      },
+      "linux_amd64": {
+        "url": "https://github.com/sigstore/cosign/releases/download/v3.1.4/cosign-linux-amd64",
+        "sha256": "424e2c97d0b45fd7a6b608a87f090f35633f4c23ece5f092d48bba11aaf4bbfa"
+      }
+    }
+  },
+  "syft": {
+    "version": "1.55.0",
+    "platforms": {
+      "darwin_arm64": {
+        "url": "https://github.com/anchore/syft/releases/download/v1.55.0/syft_1.55.0_darwin_arm64.tar.gz",
+        "sha256": "1217c258bd5eb91ef3189cf22a82e02f9cac07e4ce934350f428e93aff674625"
+      },
+      "linux_amd64": {
+        "url": "https://github.com/anchore/syft/releases/download/v1.55.0/syft_1.55.0_linux_amd64.tar.gz",
+        "sha256": "bb65249542db5fedeeb4d3f9b018b75e7264dbfbbb10486f044581a92f90490d"
+      }
+    }
+  },
+  "grype": {
+    "version": "0.121.0",
+    "platforms": {
+      "darwin_arm64": {
+        "url": "https://github.com/anchore/grype/releases/download/v0.121.0/grype_0.121.0_darwin_arm64.tar.gz",
+        "sha256": "7be39d3a0428c664ce0183e4aba31ed9accffce9eda7e7f6fa84e9c512285f27"
+      },
+      "linux_amd64": {
+        "url": "https://github.com/anchore/grype/releases/download/v0.121.0/grype_0.121.0_linux_amd64.tar.gz",
+        "sha256": "64e07133d3486115de647a66581461dccf5c732748a0a3119077395565f15519"
+      }
+    }
+  },
+  "gitleaks": {
+    "version": "8.30.1",
+    "platforms": {
+      "darwin_arm64": {
+        "url": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_darwin_arm64.tar.gz",
+        "sha256": "b40ab0ae55c505963e365f271a8d3846efbc170aa17f2607f13df610a9aeb6a5"
+      },
+      "linux_amd64": {
+        "url": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz",
+        "sha256": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
+      }
+    }
+  },
+  "actionlint": {
+    "version": "1.7.12",
+    "platforms": {
+      "darwin_arm64": {
+        "url": "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_darwin_arm64.tar.gz",
+        "sha256": "aba9ced2dee8d27fecca3dc7feb1a7f9a52caefa1eb46f3271ea66b6e0e6953f"
+      },
+      "linux_amd64": {
+        "url": "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz",
+        "sha256": "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8"
+      }
+    }
+  }
+}

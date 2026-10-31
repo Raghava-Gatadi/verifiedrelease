@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/Raghava-Gatadi/verifiedrelease",
+  "imageRepository": "ghcr.io/raghava-gatadi/verifiedrelease",
+  "certificateIdentity": "https://github.com/Raghava-Gatadi/verifiedrelease/.github/workflows/release.yml@refs/heads/main",
+  "oidcIssuer": "https://token.actions.githubusercontent.com",
+  "buildType": "https://github.com/Raghava-Gatadi/verifiedrelease/build/release/v1",
+  "sourceRef": "refs/heads/main",
+  "maxEvidenceAgeHours": 24,
+  "maxExceptionDays": 14,
+  "requiredScanners": [
+    "bandit",
+    "pip-audit",
+    "gitleaks",
+    "grype",
+    "container-config"
+  ],
+  "denySeverities": {
+    "bandit": [
+      "MEDIUM",
+      "HIGH",
+      "CRITICAL",
+      "UNKNOWN"
+    ],
+    "pip-audit": [
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "CRITICAL",
+      "UNKNOWN"
+    ],
+    "gitleaks": [
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "CRITICAL",
+      "UNKNOWN"
+    ],
+    "grype": [
+      "HIGH",
+      "CRITICAL",
+      "UNKNOWN"
+    ],
+    "container-config": [
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "CRITICAL",
+      "UNKNOWN"
+    ]
+  },
+  "exceptionScanners": [
+    "pip-audit",
+    "grype"
+  ],
+  "exceptionSeverities": [
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "UNKNOWN"
+  ],
+  "maxVulnerabilityDatabaseAgeHours": 72
+}

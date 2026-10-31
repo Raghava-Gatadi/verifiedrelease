@@ -1,6 +1,11 @@
-# TenantLedger
+# VerifiedRelease
 
-**Multi-tenant expense approvals with an executable authorization security lab.**
+**Verified container releases for TenantLedger: signatures, provenance, security policy, and rejection tests.**
+
+VerifiedRelease extends [TenantLedger](https://github.com/Raghava-Gatadi/tenantledger)
+with an executable software supply-chain security gate. It packages the application,
+checks source and container risks, signs release evidence, and verifies the exact
+artifact and build identity before deployment.
 
 TenantLedger is a complete local portfolio application: a Python API, PostgreSQL,
 Keycloak sign-in, a responsive web interface, and security tests that prove both
@@ -8,6 +13,18 @@ allowed behavior and rejected attacks. Two seeded organizations share one databa
 One user belongs to both organizations with different roles.
 
 ![Expense workspace](docs/screenshots/expenses-desktop.png)
+
+## Verified container releases
+
+TenantLedger now includes **VerifiedRelease**, an executable supply-chain security lab:
+SAST, dependency/secret/container checks, a signed SPDX SBOM and SLSA-format provenance,
+exact workflow identity and digest verification before deployment, and expiring risk
+exceptions. Real Cosign rejection demos prove that unsigned images, unexpected signers,
+and policy-failing artifacts are blocked.
+
+Start with the [release security overview](docs/release/README.md),
+[runbook](docs/release/runbook.md), and [verification record](docs/release/verification.md).
+The GitHub release workflow deploys to an ephemeral demonstration environment.
 
 ## Run it
 
@@ -79,7 +96,7 @@ Browser verification is optional locally and included in CI:
 
 ```sh
 python3 -m venv .venv
-.venv/bin/pip install playwright==1.64.1
+.venv/bin/pip install --require-hashes -r requirements-browser.lock
 .venv/bin/python -m playwright install chromium
 .venv/bin/python scripts/browser_smoke.py
 ```

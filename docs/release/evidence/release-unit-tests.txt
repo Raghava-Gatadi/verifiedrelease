@@ -1,0 +1,30 @@
+test_denied_artifact_never_invokes_deployment (test_deployment.DeploymentTests.test_denied_artifact_never_invokes_deployment) ... ok
+test_all_scanners_are_mandatory (test_policy.PolicyTests.test_all_scanners_are_mandatory) ... ok
+test_attestation_subject_binds_digest (test_policy.PolicyTests.test_attestation_subject_binds_digest) ... ok
+test_clean_artifact_is_allowed (test_policy.PolicyTests.test_clean_artifact_is_allowed) ... ok
+test_cosign_dsse_output_is_decoded (test_policy.PolicyTests.test_cosign_dsse_output_is_decoded) ... ok
+test_critical_vulnerability_cannot_be_excepted (test_policy.PolicyTests.test_critical_vulnerability_cannot_be_excepted) ... ok
+test_exact_exception_allows_and_records_waiver (test_policy.PolicyTests.test_exact_exception_allows_and_records_waiver) ... ok
+test_exact_identity_issuer_and_source_sha_are_passed_to_cosign (test_policy.PolicyTests.test_exact_identity_issuer_and_source_sha_are_passed_to_cosign) ... ok
+test_exception_cannot_cover_other_digest_package_version_or_id (test_policy.PolicyTests.test_exception_cannot_cover_other_digest_package_version_or_id) ... ok
+test_exception_requires_owner_reason_and_independent_review (test_policy.PolicyTests.test_exception_requires_owner_reason_and_independent_review) ... ok
+test_expired_exception_blocks_even_without_findings (test_policy.PolicyTests.test_expired_exception_blocks_even_without_findings) ... ok
+test_high_vulnerability_blocks (test_policy.PolicyTests.test_high_vulnerability_blocks) ... ok
+test_malformed_finding_is_not_treated_as_clean (test_policy.PolicyTests.test_malformed_finding_is_not_treated_as_clean) ... ok
+test_missing_sbom_digest_blocks (test_policy.PolicyTests.test_missing_sbom_digest_blocks) ... ok
+test_overlong_exception_blocks (test_policy.PolicyTests.test_overlong_exception_blocks) ... ok
+test_provenance_binds_builder_source_and_commit (test_policy.PolicyTests.test_provenance_binds_builder_source_and_commit) ... ok
+test_scanner_errors_and_missing_hashes_are_rejected (test_policy.PolicyTests.test_scanner_errors_and_missing_hashes_are_rejected) ... ok
+test_secrets_cannot_be_excepted (test_policy.PolicyTests.test_secrets_cannot_be_excepted) ... ok
+test_stale_future_and_timezone_free_reports_are_rejected (test_policy.PolicyTests.test_stale_future_and_timezone_free_reports_are_rejected) ... ok
+test_stale_vulnerability_database_blocks (test_policy.PolicyTests.test_stale_vulnerability_database_blocks) ... ok
+test_tags_are_never_admitted (test_policy.PolicyTests.test_tags_are_never_admitted) ... ok
+test_unsigned_and_wrong_signer_abort_before_policy (test_policy.PolicyTests.test_unsigned_and_wrong_signer_abort_before_policy) ... ok
+test_wrong_artifact_digest_is_rejected (test_policy.PolicyTests.test_wrong_artifact_digest_is_rejected) ... ok
+test_wrong_commit_is_rejected (test_policy.PolicyTests.test_wrong_commit_is_rejected) ... ok
+test_wrong_registry_is_rejected (test_policy.PolicyTests.test_wrong_registry_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.007s
+
+OK

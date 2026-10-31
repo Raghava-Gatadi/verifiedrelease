@@ -1,0 +1,7 @@
+# Require code-owner review via repository rulesets; this file alone does not enforce approval.
+/.github/ @Raghava-Gatadi
+/Dockerfile @Raghava-Gatadi
+/requirements*.lock @Raghava-Gatadi
+/security/ @Raghava-Gatadi
+/scripts/release/ @Raghava-Gatadi
+/release_tests/ @Raghava-Gatadi

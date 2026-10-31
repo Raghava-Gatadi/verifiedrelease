@@ -2,6 +2,7 @@ name: Security regression suite
 on:
   push:
   pull_request:
+  workflow_call:
 permissions:
   contents: read
 jobs:
@@ -9,13 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with: {python-version: "3.13"}
       - name: Install verification tools
         run: |
-          python -m pip install -r requirements-test.lock playwright==1.64.1
+          python -m pip install --require-hashes -r requirements-test.lock -r requirements-browser.lock
           python -m playwright install --with-deps chromium
+      - name: Release gate unit tests
+        run: python -m unittest discover -s release_tests -v
       - name: Lint
         run: python -m ruff check app tests lab scripts alembic
       - name: Start local application
@@ -28,7 +31,7 @@ jobs:
         run: python scripts/browser_smoke.py
       - name: Preserve verification evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: tenantledger-verification
           path: artifacts/

@@ -1,0 +1,128 @@
+name: Verified release
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verified-release
+  cancel-in-progress: false
+jobs:
+  regression:
+    if: github.ref == 'refs/heads/main' && github.repository == 'Raghava-Gatadi/verifiedrelease'
+    uses: ./.github/workflows/ci.yml
+  release:
+    needs: regression
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    outputs:
+      image: ${{ steps.image.outputs.ref }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with: {python-version: '3.13'}
+      - name: Install reviewed security tools
+        run: |
+          python -m pip install --require-hashes -r security/requirements.lock
+          python scripts/release/install_tools.py
+          echo "$PWD/.tools" >> "$GITHUB_PATH"
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+      - uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Require an unmodified source checkout
+        run: test -z "$(git status --porcelain)"
+      - name: Build candidate once
+        id: build
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
+        with:
+          context: .
+          target: runtime
+          platforms: linux/amd64
+          push: true
+          tags: ghcr.io/raghava-gatadi/verifiedrelease:candidate-${{ github.sha }}-${{ github.run_id }}
+          provenance: mode=max
+          labels: |
+            org.opencontainers.image.source=https://github.com/Raghava-Gatadi/verifiedrelease
+            org.opencontainers.image.revision=${{ github.sha }}
+      - name: Select immutable artifact
+        id: image
+        env:
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: echo "ref=ghcr.io/raghava-gatadi/verifiedrelease@$DIGEST" >> "$GITHUB_OUTPUT"
+      - name: Scan source and exact registry image
+        env:
+          IMAGE: ${{ steps.image.outputs.ref }}
+        run: python scripts/release/scan.py --image "$IMAGE" --commit "$GITHUB_SHA"
+      - name: Enforce policy before signing
+        env:
+          IMAGE: ${{ steps.image.outputs.ref }}
+        run: python scripts/release/policy.py --image "$IMAGE" --commit "$GITHUB_SHA" --evidence artifacts/release/security.json > artifacts/release/build-decision.json
+      - name: Generate signed provenance and attestations
+        env:
+          IMAGE: ${{ steps.image.outputs.ref }}
+        run: |
+          python scripts/release/provenance.py --commit "$GITHUB_SHA" --invocation "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/attempts/$GITHUB_RUN_ATTEMPT"
+          cosign sign --yes --bundle artifacts/release/image.sigstore.json "$IMAGE"
+          cosign attest --yes --type slsaprovenance1 --predicate artifacts/release/provenance.json --bundle artifacts/release/provenance.sigstore.json "$IMAGE"
+          cosign attest --yes --type spdxjson --predicate artifacts/release/sbom.spdx.json --bundle artifacts/release/sbom.sigstore.json "$IMAGE"
+          cosign attest --yes --type https://tenantledger.dev/attestations/security/v1 --predicate artifacts/release/security.json --bundle artifacts/release/security.sigstore.json "$IMAGE"
+          printf '%s\n' "$IMAGE" > artifacts/release/image.txt
+      - name: Preserve release evidence
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: release-evidence-${{ github.run_id }}
+          path: |
+            artifacts/release/*.json
+            artifacts/release/image.txt
+          retention-days: 30
+          if-no-files-found: error
+  deploy-demo:
+    needs: release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with: {python-version: '3.13'}
+      - name: Install verifier
+        run: |
+          python scripts/release/install_tools.py cosign
+          echo "$PWD/.tools" >> "$GITHUB_PATH"
+      - uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify identity, provenance, SBOM and policy; deploy exact digest
+        env:
+          IMAGE: ${{ needs.release.outputs.image }}
+        run: python scripts/release/deploy.py --image "$IMAGE" --commit "$GITHUB_SHA"
+      - name: Demonstrate rejection of an unexpected GitHub signer
+        env:
+          IMAGE: ${{ needs.release.outputs.image }}
+        run: python scripts/release/identity_demo.py --image "$IMAGE" --commit "$GITHUB_SHA"
+      - name: Probe deployed API
+        run: curl --fail --retry 5 --retry-delay 2 http://localhost:8000/health
+      - name: Preserve deployment decision
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: deployment-decision-${{ github.run_id }}
+          path: artifacts/deployment/
+      - name: Stop ephemeral demonstration
+        if: always()
+        run: docker compose down --volumes

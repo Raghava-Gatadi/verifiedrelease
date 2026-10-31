@@ -11,3 +11,5 @@ htmlcov/
 artifacts/
 playwright-report/
 .DS_Store
+.tools/
+*.key

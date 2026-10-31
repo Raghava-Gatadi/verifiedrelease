@@ -1,0 +1,1716 @@
+{
+  "schemaVersion": 1,
+  "image": "localhost:5055/tenantledger@sha256:15b8793e7096877498348794bef2be712653842f4901225773a5e491b432ad68",
+  "sourceCommit": "0a497a6fa7e10b433a1f2e6c2198d09a9bac2cf3",
+  "scannedAt": "2026-10-30T18:16:30.381820+00:00",
+  "scanners": {
+    "bandit": {
+      "completed": true,
+      "version": "1.9.4",
+      "reportSha256": "1552275bf50eb9eaf38d25804cad2d07991409656d04723380d84a6388871982"
+    },
+    "pip-audit": {
+      "completed": true,
+      "version": "2.10.1",
+      "reportSha256": "7887e5f47b13dc7bec92c07054fa6e670d310cba8fcead21c1d7392d5f1f7e75"
+    },
+    "gitleaks": {
+      "completed": true,
+      "version": "8.30.1",
+      "reportSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "grype": {
+      "completed": true,
+      "version": "0.121.0",
+      "reportSha256": "e7f0e4f005ff32223024241dff81bd36ca6217faa122937375f537eb511b6519"
+    },
+    "container-config": {
+      "completed": true,
+      "version": "1",
+      "reportSha256": "ea22fcf30a43ad939f7577e53a08d9d45bc0b628111a75a6518d241871ffd6cf"
+    }
+  },
+  "findings": [
+    {
+      "scanner": "bandit",
+      "id": "B105",
+      "package": "app/config.py",
+      "version": "33",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "bandit",
+      "id": "B105",
+      "package": "app/config.py",
+      "version": "35",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2011-3389",
+      "package": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-13151",
+      "package": "libtasn1-6",
+      "version": "4.19.0-2+deb12u1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-50495",
+      "package": "libncursesw6",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-50495",
+      "package": "libtinfo6",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-50495",
+      "package": "ncurses-base",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-50495",
+      "package": "ncurses-bin",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-82560",
+      "package": "perl-base",
+      "version": "5.36.0-7+deb12u4",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-5450",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "CRITICAL"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-5450",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "CRITICAL"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-41992",
+      "package": "gzip",
+      "version": "1.12-1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-9538",
+      "package": "perl-base",
+      "version": "5.36.0-7+deb12u4",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-85091",
+      "package": "zlib1g",
+      "version": "1:1.2.13.dfsg-1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-69720",
+      "package": "libncursesw6",
+      "version": "6.4-4",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-69720",
+      "package": "libtinfo6",
+      "version": "6.4-4",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-69720",
+      "package": "ncurses-base",
+      "version": "6.4-4",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-69720",
+      "package": "ncurses-bin",
+      "version": "6.4-4",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95619",
+      "package": "gcc-12-base",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95619",
+      "package": "libgcc-s1",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95619",
+      "package": "libstdc++6",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-7458",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "CRITICAL"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-11822",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2018-20796",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2018-20796",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-5928",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-5928",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-102010",
+      "package": "gcc-12-base",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-102010",
+      "package": "libgcc-s1",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-102010",
+      "package": "libstdc++6",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-5704",
+      "package": "tar",
+      "version": "1.34+dfsg-1.2+deb12u1",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-19499",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-19499",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-3184",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-7709",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-6238",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-6238",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-15367",
+      "package": "python",
+      "version": "3.13.18",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2005-2541",
+      "package": "tar",
+      "version": "1.34+dfsg-1.2+deb12u1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-80489",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-80489",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-77117",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-77117",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-54411",
+      "package": "libpam-modules",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-54411",
+      "package": "libpam-modules-bin",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-54411",
+      "package": "libpam-runtime",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-54411",
+      "package": "libpam0g",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-12345",
+      "package": "python",
+      "version": "3.13.18",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-5435",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-5435",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-76642",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010022",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010022",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-8674",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-8674",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010024",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010024",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010023",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010023",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78408",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-11824",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2024-56433",
+      "package": "login",
+      "version": "1:4.13+dfsg1-1+deb12u2",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2024-56433",
+      "package": "passwd",
+      "version": "1:4.13+dfsg1-1+deb12u2",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53615",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78409",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2010-4756",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2010-4756",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27171",
+      "package": "zlib1g",
+      "version": "1:1.2.13.dfsg-1",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2024-10041",
+      "package": "libpam-modules",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2024-10041",
+      "package": "libpam-modules-bin",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2024-10041",
+      "package": "libpam-runtime",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2024-10041",
+      "package": "libpam0g",
+      "version": "1.5.2-6+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2016-2781",
+      "package": "coreutils",
+      "version": "9.1-1",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-6791",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-6791",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-78410",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010025",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-1010025",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-9192",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2019-9192",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-19542",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-19542",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53613",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-54369",
+      "package": "libacl1",
+      "version": "2.3.1-3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-89092",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-89092",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-6141",
+      "package": "libncursesw6",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-6141",
+      "package": "libtinfo6",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-6141",
+      "package": "ncurses-base",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-6141",
+      "package": "ncurses-bin",
+      "version": "6.4-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-97399",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-97399",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-30258",
+      "package": "gpgv",
+      "version": "2.2.40-1.1+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2018-6829",
+      "package": "libgcrypt20",
+      "version": "1.10.1-3+deb12u1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-15534",
+      "package": "perl-base",
+      "version": "5.36.0-7+deb12u4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-31486",
+      "package": "perl-base",
+      "version": "5.36.0-7+deb12u4",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13757",
+      "package": "libp11-kit0",
+      "version": "0.24.1-2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-15059",
+      "package": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-15059",
+      "package": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-50812",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-50813",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-54371",
+      "package": "libattr1",
+      "version": "1:2.5.1-4",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2021-45346",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-13595",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-27456",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-18374",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-18374",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-18508",
+      "package": "tar",
+      "version": "1.34+dfsg-1.2+deb12u1",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-54370",
+      "package": "libacl1",
+      "version": "2.3.1-3",
+      "severity": "HIGH"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-42250",
+      "package": "libbz2-1.0",
+      "version": "1.0.8-5+b1",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-18938",
+      "package": "libp11-kit0",
+      "version": "0.24.1-2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2011-3374",
+      "package": "apt",
+      "version": "2.6.1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2011-3374",
+      "package": "libapt-pkg6.0",
+      "version": "2.6.1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2024-2236",
+      "package": "libgcrypt20",
+      "version": "1.10.1-3+deb12u1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-41991",
+      "package": "gzip",
+      "version": "1.12-1",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-86805",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-86805",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-68972",
+      "package": "gpgv",
+      "version": "2.2.40-1.1+deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-40228",
+      "package": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-40228",
+      "package": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-27943",
+      "package": "gcc-12-base",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-27943",
+      "package": "libgcc-s1",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-27943",
+      "package": "libstdc++6",
+      "version": "12.2.0-14+deb12u1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2007-5686",
+      "package": "login",
+      "version": "1:4.13+dfsg1-1+deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2007-5686",
+      "package": "passwd",
+      "version": "1:4.13+dfsg1-1+deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-57062",
+      "package": "gpgv",
+      "version": "2.2.40-1.1+deb12u2",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95818",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95818",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-105712",
+      "package": "gpgv",
+      "version": "2.2.40-1.1+deb12u2",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-18477",
+      "package": "tar",
+      "version": "1.34+dfsg-1.2+deb12u1",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-16742",
+      "package": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-16742",
+      "package": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "severity": "MEDIUM"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-6368",
+      "package": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-6368",
+      "package": "libc6",
+      "version": "2.36-9+deb12u14",
+      "severity": "LOW"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2011-4116",
+      "package": "perl-base",
+      "version": "5.36.0-7+deb12u4",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2013-4392",
+      "package": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2013-4392",
+      "package": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-70873",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-27587",
+      "package": "libssl3",
+      "version": "3.0.22-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-27587",
+      "package": "openssl",
+      "version": "3.0.22-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-0563",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-31439",
+      "package": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-31439",
+      "package": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2017-18018",
+      "package": "coreutils",
+      "version": "9.1-1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-31437",
+      "package": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-31437",
+      "package": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-53910",
+      "package": "diffutils",
+      "version": "1:3.8-4",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-31438",
+      "package": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2023-31438",
+      "package": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-5278",
+      "package": "coreutils",
+      "version": "9.1-1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2022-3219",
+      "package": "gpgv",
+      "version": "2.2.40-1.1+deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95209",
+      "package": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-29088",
+      "package": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-88647",
+      "package": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-88648",
+      "package": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2025-14104",
+      "package": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-56392",
+      "package": "coreutils",
+      "version": "9.1-1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95184",
+      "package": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-95210",
+      "package": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-67693",
+      "package": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-56391",
+      "package": "coreutils",
+      "version": "9.1-1",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-102474",
+      "package": "dash",
+      "version": "0.5.12-2",
+      "severity": "NEGLIGIBLE"
+    },
+    {
+      "scanner": "grype",
+      "id": "CVE-2026-102473",
+      "package": "dash",
+      "version": "0.5.12-2",
+      "severity": "NEGLIGIBLE"
+    }
+  ],
+  "sbomSha256": "7d698d3577cacbec9f7cd2e660e59c4a71e4b6ce46045f53b652368ba0417f16"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "mode": "local-keys-with-real-cosign-and-registry",
+  "sourceCommit": "0a497a6fa7e10b433a1f2e6c2198d09a9bac2cf3",
+  "ranAt": "2026-10-30T18:25:05.891517+00:00",
+  "cases": [
+    {
+      "case": "allowed",
+      "image": "localhost:5055/lab-20261030182347588665/allowed@sha256:0b26407e4070936b8b77d6a032b0c24ce2e03071a0edbcecece216e8b1d3b744",
+      "expectedStage": "ALLOWED",
+      "observedStage": "ALLOWED",
+      "passed": true,
+      "decision": {
+        "decision": "allow",
+        "image": "localhost:5055/lab-20261030182347588665/allowed@sha256:0b26407e4070936b8b77d6a032b0c24ce2e03071a0edbcecece216e8b1d3b744",
+        "sourceCommit": "0a497a6fa7e10b433a1f2e6c2198d09a9bac2cf3",
+        "exceptionsApplied": [],
+        "evaluatedAt": "2026-10-30T18:24:17.849057+00:00"
+      }
+    },
+    {
+      "case": "unsigned",
+      "image": "localhost:5055/lab-20261030182347588665/unsigned@sha256:0b26407e4070936b8b77d6a032b0c24ce2e03071a0edbcecece216e8b1d3b744",
+      "expectedStage": "SIGNATURE",
+      "observedStage": "SIGNATURE",
+      "passed": true,
+      "decision": {
+        "decision": "deny",
+        "stage": "SIGNATURE",
+        "reason": "Cosign rejected verification: Error: no signatures found\nerror during command execution: no signatures found\n"
+      }
+    },
+    {
+      "case": "unexpected-signer",
+      "image": "localhost:5055/lab-20261030182347588665/unexpected-signer@sha256:0b26407e4070936b8b77d6a032b0c24ce2e03071a0edbcecece216e8b1d3b744",
+      "expectedStage": "SIGNATURE",
+      "observedStage": "SIGNATURE",
+      "passed": true,
+      "decision": {
+        "decision": "deny",
+        "stage": "SIGNATURE",
+        "reason": "Cosign rejected verification: Error: no matching attestations: failed to verify log inclusion: transparency log certificate does not match\nerror during command execution: no matching attestations: failed to verify log inclusion: transparency log certificate does not match\n"
+      }
+    },
+    {
+      "case": "policy-failure",
+      "image": "localhost:5055/lab-20261030182347588665/policy-failure@sha256:0b26407e4070936b8b77d6a032b0c24ce2e03071a0edbcecece216e8b1d3b744",
+      "expectedStage": "POLICY",
+      "observedStage": "POLICY",
+      "passed": true,
+      "decision": {
+        "decision": "deny",
+        "stage": "POLICY",
+        "reason": "Release policy denied: grype:DEMO-CRITICAL-001:synthetic-policy-test:CRITICAL"
+      }
+    }
+  ]
+}

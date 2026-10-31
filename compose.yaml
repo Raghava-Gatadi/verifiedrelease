@@ -61,6 +61,7 @@ services:
       interval: 5s
       timeout: 3s
       retries: 20
+    cap_drop: ["ALL"]
     security_opt: ["no-new-privileges:true"]
     read_only: true
     tmpfs: ["/tmp"]
